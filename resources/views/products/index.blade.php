@@ -11,14 +11,14 @@
               {!! $errors->first('q', '<p class="help-block">:message</p>') !!}
             </div>
 
-          {!! Form::submit('Search', ['class'=>'btn btn-primary']) !!}
+          {!! Form::submit('Cari', ['class'=>'btn btn-primary']) !!}
         {!! Form::close() !!}
         <table class="table table-hover">
           <thead>
             <tr>
-              <td>Name</td>
+              <td>Nama</td>
               <td>Model</td>
-              <td>Category</td>
+              <td>Kategori</td>
               <td></td>
             </tr>
           </thead>
