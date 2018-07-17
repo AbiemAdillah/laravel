@@ -18,7 +18,7 @@
 
                 {!! Form::hidden('cat', isset($selected_category) ? $selected_category->id : '') !!}
 
-              {!! Form::submit('Search', ['class'=>'btn btn-primary']) !!}
+              {!! Form::submit('Cari', ['class'=>'btn btn-primary']) !!}
             {!! Form::close() !!}
           </div>
         </div>
@@ -44,7 +44,7 @@
               <div class="thumbnail">
                 <img src="{{ $product->photo_path }}" class="img-rounded">
                   <p>Model: {{ $product->model }}</p>
-                  <p>Category:
+                  <p>Kategori:
                     @foreach ($product->categories as $category)
                       <a href="{{ url('/catalogs?cat=' . $category->id)}}">
                         <span class="label label-primary">
