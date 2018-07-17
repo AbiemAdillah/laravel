@@ -37,7 +37,7 @@
       </div>
       <div class="col-md-9">
         <div class="row">
-          <div class="col-md-12"><h1>Category : {{ isset($selected_category) ? $selected_category->title : 'All'}}</h1></div>
+          <div class="col-md-12"><h1>Kategori : {{ isset($selected_category) ? $selected_category->title : 'All'}}</h1></div>
           @forelse ($products as $product)
             <div class="col-md-6">
               <h3>{{ $product->name }}</h3>
