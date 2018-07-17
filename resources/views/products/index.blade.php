@@ -4,21 +4,21 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h3>Product <small><a href="{{ route('products.create') }}" class="btn btn-warning btn-sm">New Product</a></small></h3>
+        <h3>Produk <small><a href="{{ route('products.create') }}" class="btn btn-warning btn-sm">Produk baru</a></small></h3>
         {!! Form::open(['url' => 'products', 'method'=>'get', 'class'=>'form-inline']) !!}
             <div class="form-group {!! $errors->has('q') ? 'has-error' : '' !!}">
-              {!! Form::text('q', isset($q) ? $q : null, ['class'=>'form-control', 'placeholder' => 'Type name / model...']) !!}
+              {!! Form::text('q', isset($q) ? $q : null, ['class'=>'form-control', 'placeholder' => 'Ketikkan nama / model...']) !!}
               {!! $errors->first('q', '<p class="help-block">:message</p>') !!}
             </div>
 
-          {!! Form::submit('Search', ['class'=>'btn btn-primary']) !!}
+          {!! Form::submit('Cari', ['class'=>'btn btn-primary']) !!}
         {!! Form::close() !!}
         <table class="table table-hover">
           <thead>
             <tr>
-              <td>Name</td>
+              <td>Nama</td>
               <td>Model</td>
-              <td>Category</td>
+              <td>Kategori</td>
               <td></td>
             </tr>
           </thead>

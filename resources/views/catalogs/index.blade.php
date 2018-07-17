@@ -6,12 +6,12 @@
       <div class="col-md-3">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title">Search products</h3>
+            <h3 class="panel-title">Cari Produk</h3>
           </div>
           <div class="panel-body">
             {!! Form::open(['url' => 'catalogs', 'method'=>'get']) !!}
                 <div class="form-group {!! $errors->has('q') ? 'has-error' : '' !!}">
-                  {!! Form::label('q', 'What are you looking for?') !!}
+                  {!! Form::label('q', 'Sedang mencari sesuatu?') !!}
                   {!! Form::text('q', isset($q) ? $q : null, ['class'=>'form-control']) !!}
                   {!! $errors->first('q', '<p class="help-block">:message</p>') !!}
                 </div>
@@ -24,10 +24,10 @@
         </div>
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title">Filter by category</h3>
+            <h3 class="panel-title">Filter berdasarkan kategori</h3>
           </div>
           <ul class="nav nav-pills nav-stacked">
-            <li ><a href="/catalogs">All Products</a></li>
+            <li ><a href="/catalogs">Semua Produk</a></li>
             @foreach(App\Category::all() as $category)
               <li ><a href="{{ url('/catalogs?cat=' . $category->id)}}">{{ $category->title }}
               {{ $category->total_products > 0 ? '(' . $category->total_products . ')' : ''}}</a></li>
@@ -58,7 +58,7 @@
           @empty
             <div class="col-md-12 text-center">
               <h1>:(</h1>
-              <p>We can't find what you're looking for.</p>
+              <p>Kami tidak menemukan barang yang sesuai.</p>
             </div>
           @endforelse
 
