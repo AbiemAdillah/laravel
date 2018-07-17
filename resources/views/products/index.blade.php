@@ -4,7 +4,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h3>Product <small><a href="{{ route('products.create') }}" class="btn btn-warning btn-sm">Produk baru</a></small></h3>
+        <h3>Produk <small><a href="{{ route('products.create') }}" class="btn btn-warning btn-sm">Produk baru</a></small></h3>
         {!! Form::open(['url' => 'products', 'method'=>'get', 'class'=>'form-inline']) !!}
             <div class="form-group {!! $errors->has('q') ? 'has-error' : '' !!}">
               {!! Form::text('q', isset($q) ? $q : null, ['class'=>'form-control', 'placeholder' => 'Ketikkan nama / model...']) !!}
